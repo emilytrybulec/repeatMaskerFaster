@@ -1,4 +1,5 @@
 genome_fasta           : "/core/projects/colossalanalyses/Finished_Genomes_for_Annotation/RockHyraxPCA13M_Assembly_and_Reads/RockHyraxPCA13M_v1.fasta"
-outdir                 :  "rock_hyrax_softmask"
+outdir                 : "rock_hyrax_softmask"
 species                : "rock hyrax"
+consensus_fasta        : "/core/labs/Oneill/etrybulec/rock_hyrax/procavia_capensis_ancestors_decendants.fa"
 cluster                : "xanadu"
