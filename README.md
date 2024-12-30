@@ -58,7 +58,7 @@ nextflow run emilytrybulec/repeatMaskerFaster \
    -params-file params.yaml
 ```
 
-Xanadu users: please refer to the [`example script`](https://github.com/emilytrybulec/repeat_curation/blob/main/nextflow.sh).    
+Xanadu users: please refer to the [`example script`](https://github.com/emilytrybulec/repeatMaskerFaster/blob/main/nextflow.sh).    
 
 
 ## Credits
