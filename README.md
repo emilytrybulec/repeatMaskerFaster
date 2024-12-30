@@ -15,7 +15,7 @@
 > [!NOTE]
 > If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow.
 
-First, go through nextflow.config to configure the pipeline to your needs. The soft masking option can be modified to change how your output genome is masked.  
+First, go through nextflow.config to configure the pipeline to your needs. The batchSize determines how big of chuncks your genome will be split into for faster processing, and the soft masking option can be modified to change how your output genome is masked.  
 
 
 `nextflow.config`:
@@ -25,6 +25,7 @@ params {
 
     // Input options
     soft_mask                  = true
+    batchSize                  = 50000000
 
     species                    = null
     genome_fasta               = null
