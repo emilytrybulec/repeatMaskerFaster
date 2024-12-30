@@ -44,7 +44,7 @@ workflow REPEAT_MASKER {
         genSample(ch_genome_fasta)
         warmupRepeatMasker(genSample.out.out, ch_species)
         twoBit(ch_genome_fasta)
-        genBatches(warmupRepeatMasker.out.out, params.batchSize, twoBit.out.out)
+        genBatches(warmupRepeatMasker.out.out, params.batch_size, twoBit.out.out)
 
         genBatches.out.bed
             .flatten()
