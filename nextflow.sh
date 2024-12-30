@@ -12,5 +12,5 @@ module load nextflow/23.10.1
 module load singularity/vcell-3.10.0
 
 export TMPDIR=$PWD/tmp
-nextflow pull emilytrybulec/repeat_curation
-nextflow run emilytrybulec/repeat_curation -params-file my_params.yaml -c my_config -profile singularity,xanadu -r main
+nextflow pull emilytrybulec/repeatMaskerFaster
+nextflow run emilytrybulec/repeatMaskerFaster -params-file my_params.yaml -c my_config -profile singularity,xanadu -r main
