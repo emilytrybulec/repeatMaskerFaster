@@ -15,7 +15,7 @@
 > [!NOTE]
 > If you are new to Nextflow and nf-core, please refer to [this page](https://nf-co.re/docs/usage/installation) on how to set-up Nextflow.
 
-First, go through nextflow.config to configure the pipeline to your needs. The batchSize determines how big of chuncks your genome will be split into for faster processing, and the soft masking option can be modified to change how your output genome is masked.  
+First, go through nextflow.config to configure the pipeline to your needs. The batch size determines how big of chuncks your genome will be split into for faster processing, and the soft masking option can be modified to change how your output genome is masked.  
 
 
 `nextflow.config`:
@@ -25,7 +25,7 @@ params {
 
     // Input options
     soft_mask                  = true
-    batchSize                  = 50000000
+    batch_size                 = 50000000
 
     species                    = null
     genome_fasta               = null
@@ -35,15 +35,16 @@ params {
 ```
 
 
-Next, create a params.yaml file to input information in place of the null configurations. This file will contain your genome and preferred out directory name. The RepeatMasker species flag is used to warmup RepeatMasker, and, and a consensus path and can be supplied to process your genome against known repeats, if available.     
+Next, create a params.yaml file to input information in place of the null configurations. This file will contain your genome and preferred out directory name. The RepeatMasker species flag is used to warmup RepeatMasker, and a consensus path and can be supplied to process your genome against known repeats, if available.     
   
 `params.yaml`:
 
 ```yaml
 params {
-   genome_fasta           : "/core/projects/colossalanalyses/Finished_Genomes_for_Annotation/BayDuikerCDO11_5Jan2023_RaconR3.fasta"
+   genome_fasta           : "/core/labs/Oneill/Finished_Genomes_for_Annotation/BayDuikerCDO11_5Jan2023_RaconR3.fasta"
    outdir                 :  "bay_duiker_softmask"
    species                : "cow"
+   consensus_fasta        : "core/labs/Oneill/etrybulec/bay_duiker/cephalophus_dorsalis_ad.fa"
    cluster                : "xanadu"
 }
 ```
