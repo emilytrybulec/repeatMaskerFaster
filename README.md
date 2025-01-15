@@ -68,7 +68,7 @@ nextflow run emilytrybulec/repeatMaskerFaster \
    -params-file params.yaml
 ```
 
-Xanadu users: please refer to the [`example script`](https://github.com/emilytrybulec/repeatMaskerFaster/blob/main/nextflow.sh).    
+Xanadu users: please refer to the [`example script`](https://github.com/emilytrybulec/repeatMaskerFaster/blob/main/nextflow.sh). You may run into permissions errors associated with the `/home/FCAM/...` directory if running in `/core/...`, so please `chmod -R 777` your `/home/FCAM/.../.nextflow` directory after running nextflow pull.     
 
 OR... if you prefer to put all of your options in the command line, you will not need a params file:  
 ```bash
