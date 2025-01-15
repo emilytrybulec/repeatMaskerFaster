@@ -13,4 +13,5 @@ module load singularity/vcell-3.10.0
 
 export TMPDIR=$PWD/tmp
 nextflow pull emilytrybulec/repeatMaskerFaster
+chmod -R 777 /home/FCAM/etrybulec/.nextflow
 nextflow run emilytrybulec/repeatMaskerFaster -params-file my_params.yaml -c my_config -profile singularity,xanadu -r main
