@@ -36,7 +36,7 @@ params {
 ```
 
 
-Next, create a params.yaml file to input information in place of the null configurations. This information can also be supplied in the command line, as shown [below](#running-the-pipeline). You will supply your genome path and preferred out directory name. The RepeatMasker species flag is used to warmup RepeatMasker, and a consensus path and can be supplied to process your genome against known repeats, if available.     
+Next, create a params.yaml file to input information in place of the null configurations. This information can also be supplied in the command line in place of the params.yaml file, as shown [below](#running-the-pipeline). You will supply your genome path and preferred out directory name. The RepeatMasker species flag is used to warmup RepeatMasker, and a consensus path and can be supplied to process your genome against known repeats, if available.     
   
 `params.yaml`:
 
