@@ -44,7 +44,7 @@ params {
    genome_fasta           : "/core/labs/Oneill/Finished_Genomes_for_Annotation/BayDuikerCDO11_5Jan2023_RaconR3.fasta"
    outdir                 :  "bay_duiker_softmask"
    species                : "cow"
-   consensus_fasta        : "core/labs/Oneill/etrybulec/bay_duiker/cephalophus_dorsalis_ad.fa"
+   consensus_fasta        : "/core/labs/Oneill/etrybulec/bay_duiker/cephalophus_dorsalis_ad.fa"
    cluster                : "xanadu"
 }
 ```
@@ -60,6 +60,16 @@ nextflow run emilytrybulec/repeatMaskerFaster \
 
 Xanadu users: please refer to the [`example script`](https://github.com/emilytrybulec/repeatMaskerFaster/blob/main/nextflow.sh).    
 
+OR... if you prefer to put all of your options in the command line, you will not need a params file:  
+```bash
+nextflow pull emilytrybulec/repeatMaskerFaster
+nextflow run emilytrybulec/repeatMaskerFaster \
+   -profile <docker/singularity/.../institute> \
+   --genome_fasta /core/labs/Oneill/Finished_Genomes_for_Annotation/BayDuikerCDO11_5Jan2023_RaconR3.fasta \
+   --consensus_fasta /core/labs/Oneill/etrybulec/bay_duiker/cephalophus_dorsalis_ad.fa \
+   --outdir bay_duiker_repeatmasker \
+   --cluster xanadu
+```
 
 ## Credits
 
