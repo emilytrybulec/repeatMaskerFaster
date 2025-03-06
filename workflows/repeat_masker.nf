@@ -69,7 +69,12 @@ workflow REPEAT_MASKER {
             .combine(consensus_nometa)
             .set{ch_rm_batches}
 
-        RepeatMasker(ch_rm_batches, ch_species, params.soft_mask)
+        if (params.libdir == null){
+        RepeatMasker(ch_rm_batches, ch_species, params.soft_mask, [])
+
+        } else {
+        RepeatMasker(ch_rm_batches, ch_species, params.soft_mask, params.libdir)
+        }
 
         ch_batches
             .flatten()
