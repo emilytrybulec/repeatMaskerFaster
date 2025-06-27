@@ -29,6 +29,7 @@ workflow REPEAT_MASKER {
 
     if (params.consensus_fasta == null) {
         ch_consensus = Channel.empty()
+        ch_consensus_fasta = Channel.empty()
     } else { 
         ch_consensus = Channel.fromPath(params.consensus_fasta) 
         ch_consensus
